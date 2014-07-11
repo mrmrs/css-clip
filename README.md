@@ -22,17 +22,17 @@ or download the css on github and include in your project.
 .clip-auto {  clip: auto; }
 .clip-i {     clip: inherit; }
 
-@include break(not-small) {
+@media screen and (min-width: 48em) {
   .clip-auto-ns {  clip: auto; }
   .clip-i-ns {     clip: inherit; }
 }
 
-@include break(medium) {
+@media screen and (min-width: 48em) and (max-width: 64em) {
   .clip-auto-m {  clip: auto; }
   .clip-i-m {     clip: inherit; }
 }
 
-@include break(large) {
+@media screen and (min-width: 64em)  {
   .clip-auto-l {  clip: auto; }
   .clip-i-l {     clip: inherit; }
 }
