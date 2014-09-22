@@ -20,7 +20,8 @@ View on [npm](https://www.npmjs.org/package/css-clip)
 ## File Size
 
 488B clip.css
-316B clip.min.css
+316B clip.min.css 
+137B minified and gzipped
 
 ## The Code
 ```
