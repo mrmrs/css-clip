@@ -1,5 +1,6 @@
 {
   "name": "css-clip",
+  "style": "clip.css",
   "version": "0.0.5",
   "homepage": "http://github.com/mrmrs/css-clip",
   "description": "Css module of single purpose classes for clip",
