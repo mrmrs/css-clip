@@ -8,8 +8,8 @@
 .clip-i {     clip: inherit; }
 
 @media screen and (min-width: 48em) {
-  .clip-auto-ns {  clip: auto; }
-  .clip-i-ns {     clip: inherit; }
+  .clip-auto-s {  clip: auto; }
+  .clip-i-s {     clip: inherit; }
 }
 
 @media screen and (min-width:48em) and (max-width: 64em) {
