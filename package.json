@@ -1,38 +1,44 @@
 {
   "name": "css-clip",
-  "style": "clip.css",
-  "version": "1.0.7",
-  "homepage": "http://github.com/mrmrs/css-clip",
-  "description": "Css module of single purpose classes for clip",
+  "version": "2.0.0",
+  "description": "Functional CSS for clip",
+  "style": "dist/clip.css",
+  "main": "dist/clip.css",
+  "exports": {
+    ".": "./dist/clip.css",
+    "./dist/*": "./dist/*",
+    "./src/*": "./src/*"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "node build.js",
+    "prepublishOnly": "npm run build"
+  },
   "keywords": [
     "css",
-    "oocss",
-    "clip"
+    "clip",
+    "utility",
+    "single-purpose",
+    "functional-css"
   ],
-  "css-clip": {
+  "homepage": "https://github.com/mrmrs/css-clip",
+  "repository": {
     "type": "git",
-    "url": "http://github.com/mrmrs/css-clip.git"
+    "url": "https://github.com/mrmrs/css-clip.git"
   },
   "bugs": {
-    "url": "https://github.com/mrmrs/css-clip/issues",
-    "email": "hi@mrmrs.cc"
+    "url": "https://github.com/mrmrs/css-clip/issues"
   },
   "author": {
     "name": "Adam Morse",
     "email": "hi@mrmrs.cc",
     "url": "http://mrmrs.cc"
   },
-  "contributors": [
-    {
-      "name": "Adam Morse",
-      "email": "hi@mrmrs.cc"
-    }
-  ],
-  "license": "MIT",
+  "license": "ISC",
   "devDependencies": {
     "lightningcss": "^1"
-  },
-  "scripts": {
-    "build": "node build.js"
   }
 }
