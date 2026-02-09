@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { transform } = require('lightningcss');
 
-const srcFile = path.join(__dirname, 'src', 'css-clip.css');
+const srcFile = path.join(__dirname, 'src', 'clip.css');
 const distDir = path.join(__dirname, 'dist');
 
 // Read source
@@ -15,22 +15,22 @@ if (!fs.existsSync(distDir)) {
 
 // Unminified — just normalize formatting
 const { code: unminified } = transform({
-  filename: 'css-clip.css',
+  filename: 'clip.css',
   code: Buffer.from(source),
   minify: false,
 });
 
-fs.writeFileSync(path.join(distDir, 'css-clip.css'), unminified);
+fs.writeFileSync(path.join(distDir, 'clip.css'), unminified);
 
 // Minified
 const { code: minified } = transform({
-  filename: 'css-clip.css',
+  filename: 'clip.css',
   code: Buffer.from(source),
   minify: true,
 });
 
-fs.writeFileSync(path.join(distDir, 'css-clip.min.css'), minified);
+fs.writeFileSync(path.join(distDir, 'clip.min.css'), minified);
 
 console.log('Build complete:');
-console.log(`  dist/css-clip.css     ${unminified.length} bytes`);
-console.log(`  dist/css-clip.min.css ${minified.length} bytes`);
+console.log(`  dist/clip.css     ${unminified.length} bytes`);
+console.log(`  dist/clip.min.css ${minified.length} bytes`);
