@@ -1,113 +1,76 @@
-# css-clip 1.0.6
+# css-clip
 
-Css module of single purpose classes for clip
+Functional CSS for clip
 
-#### Stats
+## Filesize
 
-196 | 8 | 8
----|---|---
-bytes | selectors | declarations
+| File | Size |
+|------|------|
+| `dist/clip.css` | 401 bytes |
+| `dist/clip.min.css` | 279 bytes (118 Gzipped) |
 
-## Installation
+## Install
 
-#### With [npm](https://npmjs.com)
-
-```
-npm install --save-dev css-clip
-```
-
-Learn more about using css installed with npm:
-* https://webpack.github.io/docs/stylesheets.html
-* https://github.com/defunctzombie/npm-css
-
-#### With Git
-
-http:
-```
-git clone https://github.com/tachyons-css/css-clip
-```
-
-ssh:
-```
-git clone git@github.com:tachyons-css/css-clip.git
+```sh
+npm install css-clip
 ```
 
 ## Usage
 
-#### Using with [Postcss](https://github.com/postcss/postcss)
-
-Import the css module
+### Import
 
 ```css
 @import "css-clip";
 ```
 
-Then process the css using the [`tachyons-cli`](https://github.com/tachyons-css/tachyons-cli)
-
-```sh
-$ npm i -g tachyons-cli
-$ tachyons path/to/css-file.css > dist/t.css
-```
-
-#### Using the css
-
-##### CDN
-The easiest and most simple way to use the css is to use the cdn hosted version. Include it in the head of your html with:
-
-```
-<link rel="stylesheet" href="http://unpkg.com/css-clip@1.0.6/css/css-clip.min.css" />
-```
-
-##### Locally
-The built css is located in the `css` directory. It contains an unminified and minified version.
-You can either cut and paste that css or link to it directly in your html.
+### CDN
 
 ```html
-<link rel="stylesheet" href="path/to/module/css/css-clip">
+<link rel="stylesheet" href="https://unpkg.com/css-clip/dist/clip.min.css">
 ```
 
-#### Development
+### Direct
 
-The source css files can be found in the `src` directory.
-Running `$ npm start` will process the source css and place the built css in the `css` directory.
-
-## The css
-
-```css
-/*
-   CLIP
-*/
-/* Clip can only be applied to absolutely positioned elements */
-.clip-auto { clip: auto; }
-.clip-i { clip: inherit; }
-@media screen and (min-width: 48em) {
- .clip-auto-ns { clip: auto; }
- .clip-i-ns { clip: inherit; }
-}
-@media screen and (min-width:48em) and (max-width: 64em) {
- .clip-auto-m { clip: auto; }
- .clip-i-m { clip: inherit; }
-}
-@media screen and (min-width: 64em) {
- .clip-auto-l { clip: auto; }
- .clip-i-l { clip: inherit; }
-}
+```html
+<link rel="stylesheet" href="path/to/css-clip/dist/clip.min.css">
 ```
 
-## Contributing
+## Classes
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+| Class   | Value                    |
+|---------|--------------------------|
+| `.clip-auto` | `clip: auto;` |
+| `.clip-i` | `clip: inherit;` |
+| `.clip-auto-s` | `clip: auto;` |
+| `.clip-i-s` | `clip: inherit;` |
+| `.clip-auto-m` | `clip: auto;` |
+| `.clip-i-m` | `clip: inherit;` |
+| `.clip-auto-l` | `clip: auto;` |
+| `.clip-i-l` | `clip: inherit;` |
 
-## Authors
+### Responsive
 
-* [mrmrs](http://mrmrs.io)
-* [johno](http://johnotander.com)
+Responsive variants are available for each class with the following suffixes:
+
+| Suffix | Media Query              |
+|--------|--------------------------|
+| `-s`   | `min-width: 32em`        |
+| `-m`   | `min-width: 48em`        |
+| `-l`   | `min-width: 96em`        |
+
+Example: `.clip-auto-m` applies the property at the medium breakpoint and above.
+
+## Building
+
+```sh
+npm run build
+```
+
+Processes `src/clip.css` with [Lightning CSS](https://lightningcss.dev) and outputs to `dist/`.
+
+- `dist/clip.css` — formatted
+- `dist/clip.min.css` — minified
 
 ## License
 
-ISC
-
+MIT
